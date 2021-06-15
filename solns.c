@@ -116,5 +116,5 @@ int mode(int a[],int p)
  }
  return d;
 
-} 
+ 
 
