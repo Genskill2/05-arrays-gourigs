@@ -93,28 +93,29 @@ int mode(int a[],int p)
   int big=max(a,p);
   int small=min(a,p);
   int count[100],b=-1;
+  int abig=0,d=0;
   for(int i=small;i<=big;i++)
-  {
+   {
     int c=0;
     for (int j=0;j<p;j++)
-   {
+     {
      if(a[j]==i)
       c++;
-   }
+     }
     count[++b]=c;
-  }
- int abig=0,d=0;
+   }
+ 
  for(int i=0;i<=b;i++)
- {
-   if(count[i]>abig)
   {
-   abig=count[i];
-   d=i-(0-small);
-  }
+   if(count[i]>abig)
+  
+      abig=count[i];
+      d=i-(0-small);
+  
    else
-   continue;
- }
+      continue;
+  }
  return d;
-
+}
  
 
