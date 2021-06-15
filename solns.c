@@ -60,7 +60,7 @@ int factors(int p,int a[])
 int max(int a[],int p)
 {
   int maximum=0;
-  for (int i=0;i<p:i++)
+  for (int i=0;i<p;i++)
   {
     if (a[i]>maximum)
         maximum=a[i];
@@ -95,25 +95,26 @@ int mode(int a[],int p)
   int count[100],b=-1;
   for(int i=small;i<=big;i++)
   {
-   int c=0;
-   for int j=0;j<p;j++)
+    int c=0;
+    for (int j=0;j<p;j++)
    {
-    if(a[j]==i)
+     if(a[j]==i)
       c++;
    }
-   count[++b]=c;
+    count[++b]=c;
   }
  int abig=0,d=0;
  for(int i=0;i<=b;i++)
  {
-  if(count[i]>abig)
+   if(count[i]>abig)
   {
    abig=count[i];
    d=i-(0-small);
   }
-  else
+   else
    continue;
  }
  return d;
-}
+
+} 
 
