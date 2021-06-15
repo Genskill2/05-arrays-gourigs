@@ -1,33 +1,5 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
- // max Function//
-int max(int a[],int p)
-{
-  int maximum=0;
-  for (int i=0;i<p:i++)
-  {
-    if (a[i]>maximum)
-        maximum=a[i];
-    else 
-      continue;
-  }
-  return maximum;
-}
-
-//min function//
-
-int min(int a[],int p)
-{
-   int minimum=0;
-   for(int i=0;i<p;i++)
-   {
-     if (a[i]<minimum)
-       minimum=a[i];
-     else 
-         continue;
-   }
-  return minimum;
-}
 //avg function//
  
 float average(int a[],int p)
@@ -41,38 +13,7 @@ float average(int a[],int p)
   avg=sum/p;
   return avg;
 }
-
-//mode function//
-
-int mode(int a[],int p)
-{
-  int big=max(a,p);
-  int small=min(a,p);
-  int count[100],b=-1;
-  for(int i=small;i<=big;i++)
-  {
-   int c=0;
-   for int j=0;j<p;j++)
-   {
-    if(a[j]==i)
-      c++;
-   }
-   count[++b]=c;
-  }
- int abig=0,d=0;
- for(int i=0;i<=b;i++)
- {
-  if(count[i]>abig)
-  {
-   abig=count[i];
-   d=i-(0-small);
-  }
-  else
-   continue;
- }
- return d;
-}
-//prime function//
+// factor//
 
 int isprime(int i)
 {
@@ -115,3 +56,64 @@ int factors(int p,int a[])
   return c;
 }
   
+ // max Function//
+int max(int a[],int p)
+{
+  int maximum=0;
+  for (int i=0;i<p:i++)
+  {
+    if (a[i]>maximum)
+        maximum=a[i];
+    else 
+      continue;
+  }
+  return maximum;
+}
+
+//min function//
+
+int min(int a[],int p)
+{
+   int minimum=0;
+   for(int i=0;i<p;i++)
+   {
+     if (a[i]<minimum)
+       minimum=a[i];
+     else 
+         continue;
+   }
+  return minimum;
+}
+
+
+//mode function//
+
+int mode(int a[],int p)
+{
+  int big=max(a,p);
+  int small=min(a,p);
+  int count[100],b=-1;
+  for(int i=small;i<=big;i++)
+  {
+   int c=0;
+   for int j=0;j<p;j++)
+   {
+    if(a[j]==i)
+      c++;
+   }
+   count[++b]=c;
+  }
+ int abig=0,d=0;
+ for(int i=0;i<=b;i++)
+ {
+  if(count[i]>abig)
+  {
+   abig=count[i];
+   d=i-(0-small);
+  }
+  else
+   continue;
+ }
+ return d;
+}
+
